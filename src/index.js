@@ -33,6 +33,9 @@ fetchBreeds()
     select.insertAdjacentHTML('beforeend', createMarkup(data));
     select.classList.remove('is-hidden');
     loaderElm.classList.add('is-hidden');
+    new SlimSelect({
+      select: select,
+    });
   })
   .catch(catchError);
 
